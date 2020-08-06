@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Aspect Ratio CSS</title>
+
+		<style type="text/css">
+			.aspectRatio{
+				/*--aspect-ratio: 16/9;*/
+				/*--aspect-ratio: 3/2;*/
+				/*--aspect-ratio: 8/5;*/
+				--aspect-ratio: 4/3;
+				position: relative;
+				height: 0;
+				padding-bottom: calc(100%/(var(--aspect-ratio)));
+			}
+			.aspectRatio img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aspectRatio">
+			<img src="https://media.sproutsocial.com/uploads/2017/11/Social-Media-Ideas.png">
+		</div>
+	</body>
+</html>
